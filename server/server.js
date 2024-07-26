@@ -7,15 +7,21 @@ app.use(express.static('server/public'));
 
 // Global variable that will contain all of the
 // calculation objects:
-let calculations = []
+const calculations = [];
 
+let calculations = require('./modules/calculations')
 
 // Here's a wonderful place to make some routes:
 
 // GET /calculations
+app.get('/calculations', function(req, res){
+  console.log('request for quotes was made');
+  //*send back list of calculations, so we can see it in our browser
+  res.send(calculations);
 
+});
 // POST /calculations
-
+module.exports = calculations;
 
 // PLEASE DO NOT MODIFY ANY CODE BELOW THESE BEARS:
 // 🐻  🐻‍❄️  🧸  🐻  🐻‍❄️  🧸  🐻  🐻‍❄️  🧸  🐻  🐻‍❄️  🧸
