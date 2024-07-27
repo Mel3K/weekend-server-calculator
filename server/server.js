@@ -14,12 +14,12 @@ let calculations = require('./modules/calculations')
 // Here's a wonderful place to make some routes:
 
 // GET /calculations
-app.get('/calculations', function(req, res){
+app.get('/calculations',(req, res) => {
+  res.send(calculations)
+})
   console.log('request for quotes was made');
   //*send back list of calculations, so we can see it in our browser
-  res.send(calculations);
 
-});
 // POST /calculations
 module.exports = calculations;
 
