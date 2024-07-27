@@ -8,8 +8,9 @@ app.use(express.static('server/public'));
 // Global variable that will contain all of the
 // calculation objects:
 const calculations = [];
+console.log(calculations);
 
-let calculations = require('./modules/calculations')
+// let calculations = require('./modules/calculations')
 
 // Here's a wonderful place to make some routes:
 
