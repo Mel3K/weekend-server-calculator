@@ -13,6 +13,33 @@ console.log(calculations);
 // let calculations = require('./modules/calculations')
 
 // Here's a wonderful place to make some routes:
+app.post('/calculation',req, res) => {
+const{num1,num2,operation} =req.body;
+let results:
+
+switch(operation) {
+  case 'add':
+  results = num1 + num2;
+  break;
+  case 'sub':
+  results = num1 - num2;
+  break;
+  case'mult':
+  results = num1 * num2;
+  case'divide':
+  results = num1 / num2;
+  break;
+  default:
+    return res.status(400).send('invalid operation');   
+} 
+res.json({result});
+
+});
+
+app.listed(port, () => {
+  console.log('server running');
+
+});
 
 // GET /calculations
 app.get('/calculations',(req, res) => {
@@ -22,6 +49,8 @@ app.get('/calculations',(req, res) => {
   //*send back list of calculations, so we can see it in our browser
 
 // POST /calculations
+app.post
+
 module.exports = calculations;
 
 // PLEASE DO NOT MODIFY ANY CODE BELOW THESE BEARS:

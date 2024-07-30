@@ -10,14 +10,20 @@
     <h1>Server-Side Calculator</h1>
 
     <form data-testid="calculator">
-      <input data-testid="numOne" placeholder="First Number">
-      <button id="add">+</button>
-      <button id="sub">-</button>
-      <button id="mult">*</button>
-      <button id="divide">/</button>
-      <input data-testid="numTwo" placeholder="Second Number">
-      <button id="equals">=</button>
+      <input type="number"  id="num1" data-testid="numOne" placeholder="First Number">
+      <input type="number"  id="num2" data-testid="numOne" placeholder="Second Number">
+
+      <select id="operation">
+        <button id="add">+</button>
+        <button id="sub">-</button> <button id="mult">*</button> <button id="divide">/</button>
+      </select>
+    
+        <button oncClick="calculate()" id="equals">=</button>
+        <p id="results"></p>
       <button id="clear">C</button>
+      <script src="script.js"></script>
+      </form>
+
     </form>
 
     <section id="results" data-testid="recentResult">
@@ -26,7 +32,8 @@
     </section>
 
     <section id="resultsToDate" data-testid="resultHistory">
-     <div class="containerForResults"></div> <!-- The list of calculation results goes here. -->
+     <div class="containerForResults"></div> 
+     <ul id="history"<!-- The list of calculation results goes here. -->
     </section>
   </body>
 </html>
